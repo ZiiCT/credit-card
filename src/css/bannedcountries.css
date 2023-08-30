@@ -1,0 +1,65 @@
+.banned-countries {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.banned-countries h2 {
+  margin-bottom: 20px;
+}
+
+.banned-countries-input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.banned-countries-input select {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.banned-countries-input button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.banned-countries-input button:hover {
+  background-color: #0056b3;
+}
+
+.banned-countries-list {
+  list-style: none;
+  padding: 0;
+}
+
+.banned-country-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.remove-button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.remove-button:hover {
+  background-color: darkred;
+}

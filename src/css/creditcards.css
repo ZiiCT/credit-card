@@ -1,0 +1,44 @@
+.credit-cards {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.credit-cards h2 {
+  margin-bottom: 20px;
+}
+
+.credit-card-list {
+  list-style: none;
+  padding: 0;
+}
+
+.credit-card-item {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+  margin-block: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-number {
+  font-weight: bold;
+}
+
+.card-country {
+  color: #555;
+  margin-left: 0.5rem;
+}
+
+/* Hover effect */
+.credit-card-item:hover {
+  background-color: #f0f0f0;
+  border-color: #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}

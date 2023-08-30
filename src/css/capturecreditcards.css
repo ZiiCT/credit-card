@@ -1,0 +1,56 @@
+.capture-credit-cards {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.capture-credit-cards h2 {
+  margin-bottom: 20px;
+}
+
+.capture-credit-cards form {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.capture-credit-cards label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.capture-credit-cards input,
+.capture-credit-cards select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.capture-credit-cards button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.capture-credit-cards button:hover {
+  background-color: #0056b3;
+}
+
+.success-message {
+  color: green;
+  font-size: 1.1rem;
+  margin-block: 0.6rem;
+}
+.error-message {
+  color: red;
+  font-size: 1.1rem;
+  margin-block: 0.6rem;
+}

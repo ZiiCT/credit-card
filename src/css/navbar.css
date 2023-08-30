@@ -1,0 +1,87 @@
+/* Navbar styles */
+.navbar {
+  background-color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+  transition: 0.4s;
+}
+
+.home-icon {
+  color: white;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.home-icon:hover {
+  color: lightskyblue;
+  text-shadow: 0 0 20px rgba(0, 0, 255, 0.7);
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  transition: font-size 0.3s;
+}
+
+.navbar-links li {
+  margin-left: 20px;
+  transition: margin-left 0.3s;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+.navbar-links a:hover {
+  color: lightskyblue;
+}
+
+@media (max-width: 768px) {
+  .navbar-toggle {
+    display: flex;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #333;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    transition: 0.3s;
+  }
+
+  .navbar-links.open {
+    display: flex;
+  }
+
+  .navbar-links li {
+    margin: 10px 0;
+  }
+}

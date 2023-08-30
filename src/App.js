@@ -1,24 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from "./Components/Navbar";
+import { Route, Routes } from "react-router-dom";
+import BannedCountries from "./Components/Pages/BannedCountries";
+import CaptureCreditCards from "./Components/Pages/CaptureCreditCard";
+import CreditCards from "./Components/Pages/CreditCards";
+import Home from "./Components/Pages/Home";
+import { useState } from "react";
 
 function App() {
+  const [bannedCountries, setBannedCountries] = useState([]);
+  const [savedItems, setSavedItems] = useState([]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <section className="App" aria-labelledby="Credit card information">
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route
+          path="/bannedcountries"
+          element={
+            <BannedCountries
+              bannedCountries={bannedCountries}
+              setBannedCountries={setBannedCountries}
+            />
+          }
+        />
+        <Route
+          path="/capturecreditcard"
+          element={
+            <CaptureCreditCards
+              bannedCountries={bannedCountries}
+              savedItems={savedItems}
+              setSavedItems={setSavedItems}
+            />
+          }
+        />
+        <Route
+          path="/creditcards"
+          element={<CreditCards savedItems={savedItems} />}
+        />
+      </Routes>
+    </section>
   );
 }
 
