@@ -32,11 +32,32 @@ function CaptureCreditCards({ bannedCountries, savedItems, setSavedItems }) {
     const digitPattern = /^[0-9]*$/;
     const isValidInput = digitPattern.test(input);
 
-    if (!isValidInput) {
+    if (!isValidInput || !validateCreditCard(input)) {
       setCardNumberError(true);
     } else {
       setCardNumberError(false);
     }
+  };
+
+  const validateCreditCard = (cardNumber) => {
+    let sum = 0;
+    let doubleUp = false;
+
+    for (let i = cardNumber.length - 1; i >= 0; i--) {
+      let digit = parseInt(cardNumber.charAt(i), 10);
+
+      if (doubleUp) {
+        digit *= 2;
+        if (digit > 9) {
+          digit -= 9;
+        }
+      }
+
+      sum += digit;
+      doubleUp = !doubleUp;
+    }
+
+    return sum % 10 === 0;
   };
 
   const handleSubmit = (event) => {
@@ -83,7 +104,7 @@ function CaptureCreditCards({ bannedCountries, savedItems, setSavedItems }) {
           />
           {cardNumberError && (
             <p className="error-message">
-              Please enter a valid credit card number with digits only
+              Please enter a valid credit card number
             </p>
           )}
           {duplicateCardError && (
